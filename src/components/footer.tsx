@@ -10,7 +10,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row justify-between text-start gap-8">
             <div className="w-full">
               <p>{NAME}</p>
-              <Email email={EMAIL.split('@')} />
+              <Email email={EMAIL.split('')} />
               <PhoneNumber phone={PHONE.split('')} />
               <p>
                 This website is <Link

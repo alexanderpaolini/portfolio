@@ -41,7 +41,7 @@ interface EmailPros {
 export function Email({ email }: EmailPros) {
   const handleClick = () => {
     const a = document.createElement('a');
-    a.href = `mailto:${email.join('@')}`;
+    a.href = `mailto:${email.join('')}`;
     a.style.display = 'none';
     document.body.appendChild(a);
     a.click();
