@@ -5,6 +5,11 @@ description: >-
   A bytecode interpreter I made to learn the process of creating a bytecode interpreter.
 slug: ibssbi-v1
 favor: 6
+tags:
+- bytecode
+- assembly
+- compiler
+- c
 ---
 
 **Technologies:** C  
