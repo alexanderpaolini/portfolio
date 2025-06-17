@@ -6,11 +6,11 @@ import { SiDiscord, SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
 const SIZE = 30;
 
-export const NAME = "Alexander Paolini"
-export const EMAIL = "alexander.paolini@outlook.com"
-export const PHONE = "+1 (561) 617-6922"
+export const NAME = "Alexander Paolini";
+export const EMAIL = "alexander.paolini@outlook.com";
+export const PHONE = "+1 (561) 617-6922";
 
-export const DESCRIPTION = "Alexander Paolini is a undergraduate student at the University of Central Florida and an aspiring software engineer with an interest in compilers."
+export const DESCRIPTION = "Alexander Paolini is a undergraduate student at the University of Central Florida and an aspiring software engineer with an interest in compilers.";
 
 export const SOCIALS: Social[] = [
   {
@@ -29,7 +29,7 @@ export const SOCIALS: Social[] = [
     image: SiLinkedin({ size: SIZE, color: '#0A66C2' }),
     link: 'https://linkedin.com/in/alexanderpaolini',
   }
-]
+];
 
 export const TITLE = "Alexander Paolini";
 export const DESCRIPTION_SHORT = "Alexander Paolini is a undergraduate student at the University of Central Florida and an aspiring software engineer with an interest in compilers.";
@@ -64,7 +64,7 @@ export const METADATA: Metadata = {
   ],
   creator: NAME,
   metadataBase: new URL(SITE),
-}
+};
 
 interface Page {
   href: string;

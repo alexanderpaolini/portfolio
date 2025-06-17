@@ -1,21 +1,12 @@
 import { NAME } from "@/constants";
+import { INTRO_CONTENT } from '@/constants/intro-content';
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex flex-col-reverse sm:flex-row items-center justify-between gap-8 sm:gap-16">
       <div className="w-full space-y-4 sm:space-y-6">
-        <h1>Hi,</h1>
-        <p>
-          I&apos;m Alexander Paolini, a Computer Science student at the <Link href="https://www.google.com/search?q=UCF" className="link">University of Central Florida</Link>.
-        </p>
-        <p>
-          I am most interested in the subject of Compiler Design.
-        </p>
-        <p>
-          Looking for my projects? <Link href="/projects" className="link">Right here!</Link>
-        </p>
+        {INTRO_CONTENT}
       </div>
       <div className="w-full flex sm:justify-end justify-center">
         <div>

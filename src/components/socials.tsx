@@ -23,7 +23,7 @@ export function PhoneNumber({ phone }: PhoneProps) {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  }
+  };
 
   return (
     <div className="flex link whitespace-pre cursor-pointer" onClick={handleClick}>
@@ -46,7 +46,7 @@ export function Email({ email }: EmailPros) {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  }
+  };
   return (
     <div className="flex link whitespace-pre cursor-pointer" onClick={handleClick}>
       {email.map((char, idx) => (
