@@ -20,3 +20,15 @@ export interface Project {
     favor: number;
 }
 
+export interface Post {
+    title: string;
+    description: string;
+    content: string;
+    slug: string;
+    date: {
+        published: string;
+        modified?: string;
+    };
+    hidden?: boolean;
+    tags?: string[];
+}
