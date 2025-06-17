@@ -1,7 +1,7 @@
-import { ProjectBody } from "@/components/project-body";
+import { ProjectBody } from "@/components/project/body";
+import { ProjectHeader } from '@/components/project/header';
 import { getProjectBySlug } from "@/lib/projects";
 import { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 
 interface Params {
@@ -43,23 +43,7 @@ export default async function ProjectPage(props: Params) {
 
   return (
     <main>
-      <div className="flex flex-row">
-        {project.icon && (
-          <div className="flex-shrink-0 flex items-center justify-center w-18 h-18 my-auto">
-            <Image
-              src={project.icon}
-              alt={project.title}
-              width={1024}
-              height={1024}
-              loading="lazy"
-              className="w-14 h-14 object-contain" />
-          </div>
-        )}
-        <div className="items-center my-auto">
-          <h1>{project.title}</h1>
-          <span>{project.date.modified || project.date.published}</span>
-        </div>
-      </div>
+      <ProjectHeader icon={project.icon} title={project.title} date={project.date.modified || project.date.published} />
       <ProjectBody content={project.content} />
     </main>
   );
