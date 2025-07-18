@@ -10,20 +10,22 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row justify-between text-start gap-8">
             <div className="w-full">
               <p>{NAME}</p>
-              <Email email={EMAIL.split('')} />
-              <PhoneNumber phone={PHONE.split('')} />
+              <Email email={EMAIL.split("")} />
+              <PhoneNumber phone={PHONE.split("")} />
               <p>
-                This website is <Link
+                This website is{" "}
+                <Link
                   href={`https://github.com/alexanderpaolini/portfolio`}
-                  className="link">
+                  className="link"
+                >
                   open source
                 </Link>
               </p>
             </div>
             <Socials />
           </div>
-        </footer >
-      </div >
+        </footer>
+      </div>
     </div>
   );
 }

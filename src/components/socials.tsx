@@ -1,11 +1,17 @@
-'use client';
-import { SOCIALS } from '@/constants';
-import Link from 'next/link';
-import { Social as SocialType } from '../types';
+"use client";
+
+import Link from "next/link";
+import { Social as SocialType } from "../types";
+import { SOCIALS } from "@/constants";
 
 export function Social({ image, link }: SocialType) {
   return (
-    <Link href={link} target="_blank" rel="noopener noreferrer">
+    <Link
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="h-[30px] w-[30px]"
+    >
       {image}
     </Link>
   );
@@ -17,16 +23,19 @@ interface PhoneProps {
 
 export function PhoneNumber({ phone }: PhoneProps) {
   const handleClick = () => {
-    const a = document.createElement('a');
-    a.href = `tel:${phone.join('')}`;
-    a.style.display = 'none';
+    const a = document.createElement("a");
+    a.href = `tel:${phone.join("")}`;
+    a.style.display = "none";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   };
 
   return (
-    <div className="flex link whitespace-pre cursor-pointer" onClick={handleClick}>
+    <div
+      className="flex link whitespace-pre cursor-pointer"
+      onClick={handleClick}
+    >
       {phone.map((char, idx) => (
         <p key={idx}>{char}</p>
       ))}
@@ -40,15 +49,18 @@ interface EmailPros {
 
 export function Email({ email }: EmailPros) {
   const handleClick = () => {
-    const a = document.createElement('a');
-    a.href = `mailto:${email.join('')}`;
-    a.style.display = 'none';
+    const a = document.createElement("a");
+    a.href = `mailto:${email.join("")}`;
+    a.style.display = "none";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
   };
   return (
-    <div className="flex link whitespace-pre cursor-pointer" onClick={handleClick}>
+    <div
+      className="flex link whitespace-pre cursor-pointer"
+      onClick={handleClick}
+    >
       {email.map((char, idx) => (
         <p key={idx}>{char}</p>
       ))}
@@ -60,11 +72,7 @@ export function Socials() {
   return (
     <div className="flex flex-row gap-4 items-center">
       {SOCIALS.map((social, idx) => (
-        <Social
-          key={idx}
-          image={social.image}
-          link={social.link}
-        />
+        <Social key={idx} image={social.image} link={social.link} />
       ))}
     </div>
   );
