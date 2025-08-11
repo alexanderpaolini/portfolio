@@ -4,7 +4,7 @@ interface Props {
 
 export function PostBody({ content }: Props) {
   return (
-    <div className="prose prose-stone dark:invert dark:prose-img:invert max-w-4xl mt-8">
+    <div className="prose prose-stone max-w-4xl mt-8 dark:prose-invert">
       <div dangerouslySetInnerHTML={{ __html: content }} />
     </div>
   );

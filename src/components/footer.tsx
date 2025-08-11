@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Fragment } from "react";
 
@@ -28,7 +30,7 @@ export const ContactLink: FooterLink = {
 };
 
 export const TopLink: FooterLink = {
-  href: "#top",
+  href: "#",
   label: "↑ Top",
   scroll: true,
 };
@@ -38,49 +40,98 @@ export const ResumeLink: FooterLink = {
   label: " Resume",
 };
 
-function FooterNav({ links }: { links: FooterLink[] }) {
+export const GithubLink: FooterLink = {
+  href: "https://github.com/alexanderpaolini",
+  label: " GitHub",
+};
+
+function FooterNav({
+  left,
+  right,
+}: {
+  left?: FooterLink[];
+  right?: FooterLink[];
+}) {
+  if (!left) left = [HomeLink, ProjectsLink, WritingLink];
+  if (!right) right = [ResumeLink, GithubLink, ContactLink];
+
   return (
-    <footer className="w-full max-w-4xl mx-auto mt-4 pb-12 pt-[5vh]">
-      <nav className="flex flex-wrap gap-2 text-white items-center">
-        {links.map((link, idx) => (
-          <Fragment key={link.label}>
-            <Link
-              href={link.href}
-              scroll={link.scroll}
-              className="hover:underline"
-            >
-              {link.label}
-            </Link>
-            {idx < links.length - 1 && (
-              <span className="mx-1 text-gray-400">|</span>
-            )}
-          </Fragment>
-        ))}
+    <footer className="w-full max-w-4xl mx-auto mt-4 pb-12 pt-8">
+      <nav className="flex flex-wrap text-white justify-between gap-2">
+        <div className="flex flex-wrap items-center">
+          {left.map((link, idx) => (
+            <FooterLink
+              key={link.label}
+              link={link}
+              isLast={idx === left.length - 1}
+            />
+          ))}
+        </div>
+
+        {right && right.length > 0 && (
+          <div className="flex flex-wrap items-center">
+            {right.map((link, idx) => (
+              <FooterLink
+                key={link.label}
+                link={link}
+                isLast={idx === right.length - 1}
+              />
+            ))}
+          </div>
+        )}
       </nav>
     </footer>
   );
 }
 
+function FooterLink({ link, isLast }: { link: FooterLink; isLast: boolean }) {
+  return (
+    <Fragment key={link.label}>
+      <Link
+        href={link.href}
+        scroll={false}
+        onClick={(e) => {
+          if (link.scroll) {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }
+        }}
+        className="link font-extrabold"
+      >
+        {link.label}
+      </Link>
+      {!isLast && <span>&nbsp;|&nbsp;</span>}
+    </Fragment>
+  );
+}
+
+export function ContactPageFooterNav() {
+  return <FooterNav right={[ResumeLink, GithubLink]} />;
+}
+
 export function HomePageFooterNav() {
-  return <FooterNav links={[ProjectsLink, WritingLink, ContactLink]} />;
+  return <FooterNav left={[ProjectsLink, WritingLink]} />;
 }
 
 export function ProjectsPageFooterNav() {
-  return <FooterNav links={[HomeLink, WritingLink, ContactLink]} />;
+  return <FooterNav left={[HomeLink, WritingLink]} />;
 }
 
 export function ProjectPageFooterNav() {
-  return <FooterNav links={[TopLink, HomeLink, ContactLink]} />;
+  return <FooterNav left={[TopLink, HomeLink, ProjectsLink, WritingLink]} />;
 }
 
 export function WritingsPageFooterNav() {
-  return <FooterNav links={[HomeLink, ProjectsLink, ContactLink]} />;
+  return <FooterNav left={[HomeLink, ProjectsLink]} />;
 }
 
 export function WritingPageFooterNav() {
-  return <FooterNav links={[HomeLink, ProjectsLink, ContactLink]} />;
+  return <FooterNav left={[TopLink, HomeLink, ProjectsLink, WritingLink]} />;
 }
 
 export function NotFoundPageFooterNav() {
-  return <FooterNav links={[HomeLink]} />;
+  return <FooterNav left={[HomeLink]} right={[]} />;
 }

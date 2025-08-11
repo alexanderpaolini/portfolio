@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${cascadiaCode.className} antialiased flex flex-col`}
       >
-        <div className="w-full max-w-4xl mx-auto px-4 pt-[10vh]">
+        <div className="w-full max-w-3xl mx-auto px-4 pt-[10vh]">
           {children}
         </div>
       </body>

@@ -1,4 +1,4 @@
-import {  ProjectPageFooterNav } from "@/components/footer";
+import { ProjectPageFooterNav } from "@/components/footer";
 import { ProjectBody } from "@/components/project/body";
 import { ProjectHeader } from "@/components/project/header";
 import { getProjectBySlug } from "@/lib/projects";
