@@ -34,7 +34,7 @@ export const SOCIALS: Social[] = [
   {
     image: SiLinkedin({ size: SOCIAL_SIZE, color: "#0A66C2" }),
     link: "https://linkedin.com/in/alexanderpaolini",
-  },
+  }
 ];
 
 export const TITLE = "Alexander Paolini";

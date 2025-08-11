@@ -70,7 +70,7 @@ export function Email({ email }: EmailPros) {
 
 export function Socials() {
   return (
-    <div className="flex flex-row gap-4 items-center">
+    <div className="flex flex-row gap-4 items-center flex-wrap">
       {SOCIALS.map((social, idx) => (
         <Social key={idx} image={social.image} link={social.link} />
       ))}

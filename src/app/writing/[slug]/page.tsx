@@ -1,3 +1,4 @@
+import { WritingPageFooterNav } from "@/components/footer";
 import { PostBody } from "@/components/post/body";
 import { PostHeader } from "@/components/post/header";
 import { getPostBySlug } from "@/lib/writing";
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: project.description,
     openGraph: {
       url: `/writing/${project.slug}`,
-      type: "article"
+      type: "article",
     },
     twitter: {
       card: "summary",
@@ -41,8 +42,12 @@ export default async function WritingPage(props: Params) {
 
   return (
     <main>
-      <PostHeader title={post.title} date={post.date.modified || post.date.published} />
+      <PostHeader
+        title={post.title}
+        date={post.date.modified || post.date.published}
+      />
       <PostBody content={post.content} />
+      <WritingPageFooterNav />
     </main>
   );
 }
