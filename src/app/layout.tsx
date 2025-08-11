@@ -1,8 +1,7 @@
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { METADATA } from "@/constants";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
 import "./globals.css";
 
@@ -16,6 +15,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const cascadiaCode = localFont({
+  src: "../../public/assets/fonts/CascadiaCodeNF.woff2",
+  variable: "--font-cascadia-code",
+});
+
 export const metadata: Metadata = METADATA;
 
 export default function RootLayout({
@@ -25,12 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
-        <Header />
-        <div className="w-full max-w-4xl mx-auto px-4">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${cascadiaCode.className} antialiased flex flex-col`}
+      >
+        <div className="w-full max-w-4xl mx-auto px-4 pt-[10vh]">
           {children}
         </div>
-        <Footer />
       </body>
     </html>
   );
