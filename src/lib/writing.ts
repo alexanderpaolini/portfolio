@@ -1,8 +1,8 @@
-import { join } from 'path';
-import { readFolder } from './markdown';
-import { Post } from '@/types';
+import { join } from "path";
+import { readFolder } from "./markdown";
+import { Post } from "@/types";
 
-const WRITING_FOLDER = join(process.cwd(), 'src', 'writing');
+const WRITING_FOLDER = join(process.cwd(), "src", "writing");
 
 export function readPosts(): Post[] {
   const posts = readFolder(WRITING_FOLDER);
@@ -16,10 +16,10 @@ export function readPosts(): Post[] {
         slug: post.data.slug,
         date: {
           published: post.data.published,
-          modified: post.data.modified
+          modified: post.data.modified,
         },
         tags: post.data.tags || [],
-        hidden: post.data.hidden || false
+        hidden: post.data.hidden || false,
       } as Post;
     })
     .sort((a, b) => {
@@ -36,5 +36,6 @@ export const posts = readPosts();
 
 export function getPostBySlug(slug?: string): Post | undefined {
   if (!slug) return undefined;
-  return posts.find(post => post.slug === slug);
+
+  return posts.find((post) => post.slug === slug);
 }
