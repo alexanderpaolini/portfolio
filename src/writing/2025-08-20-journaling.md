@@ -2,7 +2,7 @@
 title: "Journaling"
 published: 2025/08/21
 description: >-
-  How I'm using typst for my daily journal
+  How I'm using typst for my daily journal.
 slug: journaling
 ---
 
