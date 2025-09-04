@@ -1,4 +1,4 @@
-import { HomePageFooterNav } from "@/components/footer";
+import { FooterNav } from "@/components/footer";
 import { NAME } from "@/constants";
 import { INTRO_CONTENT } from "@/constants/intro-content";
 import Image from "next/image";
@@ -20,7 +20,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <HomePageFooterNav/>
+      <FooterNav/>
     </>
   );
 }

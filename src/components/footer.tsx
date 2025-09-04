@@ -45,45 +45,6 @@ export const GithubLink: FooterLink = {
   label: " GitHub",
 };
 
-function FooterNav({
-  left,
-  right,
-}: {
-  left?: FooterLink[];
-  right?: FooterLink[];
-}) {
-  if (!left) left = [HomeLink, ProjectsLink, WritingLink];
-  if (!right) right = [ResumeLink, GithubLink, ContactLink];
-
-  return (
-    <footer className="w-full max-w-4xl mx-auto mt-4 pb-12 pt-8">
-      <nav className="flex flex-wrap text-white justify-between gap-2">
-        <div className="flex flex-wrap items-center">
-          {left.map((link, idx) => (
-            <FooterLink
-              key={link.label}
-              link={link}
-              isLast={idx === left.length - 1}
-            />
-          ))}
-        </div>
-
-        {right && right.length > 0 && (
-          <div className="flex flex-wrap items-center">
-            {right.map((link, idx) => (
-              <FooterLink
-                key={link.label}
-                link={link}
-                isLast={idx === right.length - 1}
-              />
-            ))}
-          </div>
-        )}
-      </nav>
-    </footer>
-  );
-}
-
 function FooterLink({ link, isLast }: { link: FooterLink; isLast: boolean }) {
   return (
     <Fragment key={link.label}>
@@ -108,30 +69,63 @@ function FooterLink({ link, isLast }: { link: FooterLink; isLast: boolean }) {
   );
 }
 
-export function ContactPageFooterNav() {
-  return <FooterNav right={[ResumeLink, GithubLink]} />;
-}
+export function FooterNav({
+  top,
+  left,
+  right,
+}: {
+  top?: FooterLink[];
+  left?: FooterLink[];
+  right?: FooterLink[];
+}) {
+  if (!top) top = [];
+  if (!left) left = [HomeLink, ProjectsLink, WritingLink];
+  if (!right) right = [ResumeLink, GithubLink, ContactLink];
 
-export function HomePageFooterNav() {
-  return <FooterNav left={[ProjectsLink, WritingLink]} />;
-}
+  return (
+    <footer className="w-full max-w-4xl mx-auto mt-4 pb-12 pt-8">
+      {top && top.length > 0 && (
+        <nav className="flex mb-2 justify-start">
+          <div className="flex items-center">
+            {top.map((link, idx) => (
+              <FooterLink
+                key={link.label}
+                link={link}
+                isLast={idx === top.length - 1}
+              />
+            ))}
+          </div>
+        </nav>
+      )}
 
-export function ProjectsPageFooterNav() {
-  return <FooterNav left={[HomeLink, WritingLink]} />;
-}
-
-export function ProjectPageFooterNav() {
-  return <FooterNav left={[TopLink, HomeLink, ProjectsLink, WritingLink]} />;
-}
-
-export function WritingsPageFooterNav() {
-  return <FooterNav left={[HomeLink, ProjectsLink]} />;
+      <nav className="flex flex-wrap text-white justify-between gap-2">
+        <div className="flex flex-wrap items-center">
+          {left.map((link, idx) => (
+            <FooterLink
+              key={link.label}
+              link={link}
+              isLast={idx === left.length - 1}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center">
+          {right.map((link, idx) => (
+            <FooterLink
+              key={link.label}
+              link={link}
+              isLast={idx === right.length - 1}
+            />
+          ))}
+        </div>
+      </nav>
+    </footer>
+  );
 }
 
 export function WritingPageFooterNav() {
-  return <FooterNav left={[TopLink, HomeLink, ProjectsLink, WritingLink]} />;
+  return <FooterNav top={[TopLink]} />;
 }
 
-export function NotFoundPageFooterNav() {
-  return <FooterNav left={[HomeLink]} right={[]} />;
+export function ProjectPageFooterNav() {
+  return <FooterNav top={[TopLink]} />;
 }

@@ -1,4 +1,4 @@
-import { ContactPageFooterNav } from "@/components/footer";
+import { FooterNav } from "@/components/footer";
 import { Email, PhoneNumber, Socials } from "@/components/socials";
 import { EMAIL, PHONE } from "@/constants";
 
@@ -28,7 +28,7 @@ export default async function Contact() {
           <Socials />
         </div>
       </section>
-      <ContactPageFooterNav />
+      <FooterNav />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { ProjectsPageFooterNav } from "@/components/footer";
+import { FooterNav } from "@/components/footer";
 import { ProjectList } from "@/components/project/list";
 
 export default async function Projects() {
@@ -6,7 +6,7 @@ export default async function Projects() {
     <main>
       <h1 className="border-b-4">Projects</h1>
       <ProjectList />
-      <ProjectsPageFooterNav />
+      <FooterNav />
     </main>
   );
 }
