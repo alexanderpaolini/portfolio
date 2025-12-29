@@ -8,7 +8,7 @@ slug: journaling
 
 A few weeks ago I had the idea to start journaling. Not because I want to be particularly honest with myself or in tune with my emotions -- not that those aren't nice ancillary goals -- but to reinforce my weak memory and keep track of what happened when. My memory isn't that great. Unless I'm trying to remember something, I likely will forget, or at the very least it will slip my mind. I lose track of dates; I have no idea what happened when; I even forget small events.
 
-Oftentimes I'll be with friends and they being up a specific event -- maybe watching a show, or going to minigolf -- and I have souch a hard time remembering what exactly happened. My goal with this journal is to keep track of whats happening. As a bonus, it would be nice to be able to read or present in the future.
+Oftentimes I'll be with friends and they being up a specific event -- maybe watching a show, or going to minigolf -- and I have such a hard time remembering what exactly happened. My goal with this journal is to keep track of whats happening. As a bonus, it would be nice to be able to read or present in the future.
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Last but not least, it needs to **render** well. When I finish an entry I want t
 
 ## A Possible Solution
 
-I've recently started using [typst](https://typst.app/) to type up documents. I started with my resume, then I retyped my [CS1 review](https://github.com/alexanderpaolini/cs1-review). Its pretty nice as an alternative to Latex, especially since it renders small documents in miliseconds.
+I've recently started using [typst](https://typst.app/) to type up documents. I started with my resume, then I retyped my [CS1 review](https://github.com/alexanderpaolini/cs1-review). Its pretty nice as an alternative to Latex, especially since it renders small documents in milliseconds.
 
 I drafted the document below to test it out.
 
@@ -61,7 +61,7 @@ This is an example journal entry.
 
 I can write my journal using this as is. It looks nice and each entry has its own page. You can see the preview [here](/assets/journaling-ex1.pdf). The only thing its lacking is a table of contents.
 
-For the table of contents I wanted to be able to view it in a calander-like grid. I can do that like this
+For the table of contents I wanted to be able to view it in a calendar-like grid. I can do that like this
 
 ```typ
 == 2025
@@ -108,7 +108,7 @@ And the final product can be seen in the [final product PDF](/assets/journaling-
 
 ## Multi-File Support (Or Lack Thereof)
 
-One **major** issue with this strategy is that every entry must be in the same file. I really don't want to do that. Ideally I can sit down and just start typing without navigating to the end of the file and doing some formatting. Typst doesn't have support for reading directories quite yet, but there are a few workarounds to use. The one I will use is using a pythons script to create a `.typ` file and run the `typst compile content.typ` command. This isn't a beautiful approach but it let me automatically generate the calander with links too[^1].
+One **major** issue with this strategy is that every entry must be in the same file. I really don't want to do that. Ideally I can sit down and just start typing without navigating to the end of the file and doing some formatting. Typst doesn't have support for reading directories quite yet, but there are a few workarounds to use. The one I will use is using a pythons script to create a `.typ` file and run the `typst compile content.typ` command. This isn't a beautiful approach but it let me automatically generate the calendar with links too[^1].
 
 *Note*: For brevity I won't include self-explanatory functions in this post. The full script can be found [here](/assets/journaling-example.zip).
 
@@ -191,7 +191,7 @@ if __name__ == "__main__":
 
 The basics of this is that all I need to do is read the files to get the content, fill out the template for each of the pages, render the calender table of contents, and then compile the file.
 
-All that's left is creating the calander part. Unfortnately this is a bit more complicated. The file names leave me with essentially a list of dates. So in order to group by year and month I need some disgusting nested code (I know I know its disgusting). If I group all days by month and year, then using python's calander function I can create the grid for each month, with each date in `dates` being add as a link.
+All that's left is creating the calendar part. Unfortunately this is a bit more complicated. The file names leave me with essentially a list of dates. So in order to group by year and month I need some disgusting nested code (I know I know its disgusting). If I group all days by month and year, then using python's calendar function I can create the grid for each month, with each date in `dates` being add as a link.
 
 ```py
 GRID_TEMPLATE = """

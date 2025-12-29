@@ -1,10 +1,14 @@
 import { FooterNav } from "@/components/footer";
 import { Email, PhoneNumber, Socials } from "@/components/socials";
 import { EMAIL, PHONE } from "@/constants";
+import Link from "next/link";
 
 export default async function Contact() {
   return (
     <main>
+      <Link href="/" className="link">
+        󰌍 Back
+      </Link>
       <h1 className="border-b-4">Contact</h1>
       <section className="mt-8 flex flex-col gap-6">
         <p>Feel free to contact me by</p>

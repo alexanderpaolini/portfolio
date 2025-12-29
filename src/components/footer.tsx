@@ -24,6 +24,11 @@ export const WritingLink: FooterLink = {
   label: " Blog",
 };
 
+export const PhotosLink: FooterLink = {
+  href: "/photos",
+  label: " Photos",
+};
+
 export const ContactLink: FooterLink = {
   href: "/contact",
   label: " Contact",
@@ -79,7 +84,7 @@ export function FooterNav({
   right?: FooterLink[];
 }) {
   if (!top) top = [];
-  if (!left) left = [HomeLink, ProjectsLink, WritingLink];
+  if (!left) left = [HomeLink, ProjectsLink, WritingLink, PhotosLink];
   if (!right) right = [ResumeLink, GithubLink, ContactLink];
 
   return (
