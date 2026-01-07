@@ -1,7 +1,5 @@
 import { Social } from "@/types";
-import { ClipboardList, File, FileText, HomeIcon } from "lucide-react";
 import { Metadata } from "next";
-import { FC } from "react";
 import { SiDiscord, SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import { BeatLeaderIcon } from "./beatleader-icon";
 
@@ -12,7 +10,7 @@ export const EMAIL = "alexander.paolini@outlook.com";
 export const PHONE = "+1 (561) 617-6922";
 
 export const DESCRIPTION =
-  "Alexander Paolini is a undergraduate student at the University of Central Florida and an aspiring software engineer with an interest in compilers.";
+  "Alexander Paolini is a undergraduate student at the University of Central Florida and an aspiring software engineer.";
 
 export const SOCIALS: Social[] = [
   {
@@ -73,15 +71,3 @@ export const METADATA: Metadata = {
   metadataBase: new URL(SITE),
 };
 
-interface Page {
-  href: string;
-  label: string;
-  icon: FC<React.SVGProps<SVGSVGElement>>;
-}
-
-export const PAGES: Page[] = [
-  { href: "/", label: "Home", icon: HomeIcon },
-  { href: "/writing", label: "Writing", icon: FileText },
-  { href: "/projects", label: "Projects", icon: ClipboardList },
-  { href: "/resume", label: "Resume", icon: File },
-];
