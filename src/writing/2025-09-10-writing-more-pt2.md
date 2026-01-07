@@ -4,6 +4,7 @@ published: 2025/10/02
 description: >-
     An amendment to my first blog post.
 slug: writing-pt2
+hidden: true
 ---
 
 [
