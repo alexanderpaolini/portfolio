@@ -9,10 +9,10 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/gh',
-        destination: 'https://github.com/alexanderpaolini',
+        source: '/gh/:path*',
+        destination: 'https://github.com/alexanderpaolini/:path*',
         permanent: true,
-      }
+      },
     ];
   }
 };
