@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
         source: '/resume',
         destination: '/assets/resume.pdf',
         permanent: true,
+      },
+      {
+        source: '/gh',
+        destination: 'https://github.com/alexanderpaolini',
+        permanent: true,
       }
     ];
   }
