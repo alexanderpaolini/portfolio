@@ -1,4 +1,4 @@
-import { WritingPageFooterNav } from "@/components/footer";
+import { FooterNav, TopLink } from "@/components/footer";
 import { PostBody } from "@/components/post/body";
 import { PostHeader } from "@/components/post/header";
 import { getPostBySlug } from "@/lib/writing";
@@ -47,7 +47,7 @@ export default async function WritingPage(props: Params) {
         date={post.date.modified || post.date.published}
       />
       <PostBody content={post.content} />
-      <WritingPageFooterNav />
+      <FooterNav top={[TopLink]} />
     </main>
   );
 }

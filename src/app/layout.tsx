@@ -1,23 +1,17 @@
 import { METADATA } from "@/constants";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Source_Sans_3, Geist } from "next/font/google";
 
 import "./globals.css";
 
-const geistSans = Geist({
+const sourceSans = Source_Sans_3({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-});
-
-const cascadiaCode = localFont({
-  src: "../../public/assets/fonts/CascadiaCodeNF.woff2",
-  variable: "--font-cascadia-code",
 });
 
 export const metadata: Metadata = METADATA;
@@ -30,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${cascadiaCode.className} antialiased flex flex-col`}
+        className={`${sourceSans.className} ${geistSans.variable} antialiased flex flex-col`}
       >
         <div className="w-full max-w-3xl mx-auto px-4 pt-[10vh]">
           {children}

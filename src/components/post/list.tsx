@@ -3,7 +3,7 @@ import { PostCard } from './card';
 
 export function PostList() {
   return (
-    <div className="space-y-8 mt-8">
+    <div className="flex flex-col gap-6 mt-4">
       {posts.filter(x => !x.hidden).map((post) => (
         <PostCard key={post.slug} post={post} />
       ))}

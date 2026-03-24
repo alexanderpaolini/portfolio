@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "@/components/link";
 import { ProjectIcon } from "./icon";
 
 interface Props {
@@ -13,7 +13,7 @@ export function ProjectHeader({ icon, title, date }: Props) {
       <ProjectIcon icon={icon} title={title} />
       <div className="items-center my-auto">
         <Link href="/projects" className="link">
-          󰌍 Back
+          <i className="nf nf-md-keyboard_backspace" />{" "}Back
         </Link>
         <h1>{title}</h1>
         <span>{date}</span>

@@ -3,22 +3,23 @@
 import { FooterNav } from "@/components/footer";
 import { Photo, photos } from "@/constants/photos";
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/link";
 import { useState } from "react";
 
 export default function Page() {
   const [selectedPhoto, setSelectedPhoto] = useState<undefined | Photo>(
-    undefined
+    undefined,
   );
 
   return (
-    <main className="min-h-screen flex flex-col px-4">
+    <main>
       <Link href="/" className="link">
-        󰌍 Back
+        <i className="nf nf-md-keyboard_backspace" />{" "}Back
       </Link>
       <h1 className="border-b-4 mb-6">Photos</h1>
       <p className="mb-8 max-w-2xl">
-        Here are some of my favorite photos I&apos;ve taken. Click on them -- they expand.
+        Here are some of my favorite photos I&apos;ve taken. Click on them --
+        they expand.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-6 w-fit h-fit">
         {photos.map((photo, idx) => (

@@ -1,4 +1,4 @@
-import { ProjectPageFooterNav } from "@/components/footer";
+import { FooterNav, TopLink } from "@/components/footer";
 import { ProjectBody } from "@/components/project/body";
 import { ProjectHeader } from "@/components/project/header";
 import { getProjectBySlug } from "@/lib/projects";
@@ -50,7 +50,7 @@ export default async function ProjectPage(props: Params) {
         date={project.date.modified || project.date.published}
       />
       <ProjectBody content={project.content} />
-      <ProjectPageFooterNav />
+      <FooterNav top={[TopLink]} />
     </main>
   );
 }

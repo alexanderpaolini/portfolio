@@ -1,5 +1,5 @@
 import { Post } from "@/types";
-import Link from "next/link";
+import Link from "@/components/link";
 import { PostDescription } from "./description";
 import { PostTags } from "./tags";
 
@@ -9,10 +9,10 @@ interface Props {
 
 export function PostCard({ post }: Props) {
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex-shrink-0 flex block items-start gap-2 h-auto w-auto">
+    <div className="flex flex-col">
+      <div className="shrink-0 block items-start gap-2 h-auto w-auto">
         <div>
-          <span>
+          <span>  
             {post.date.modified ?? post.date.published}
           </span>
           <h2>

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/link";
 import { Social as SocialType } from "../types";
 import { SOCIALS } from "@/constants";
 
