@@ -36,7 +36,7 @@ I drafted the document below to test it out.
 #set document(
   author: "Alexander Paolini",
   title: "Journal",
-  description: "Alexander Paolni's Journal",
+  description: "Alexander Paolini's Journal",
 )
 
 #set page(
@@ -59,7 +59,7 @@ Compiled on #datetime.today().display()
 This is an example journal entry.
 ```
 
-I can write my journal using this as is. It looks nice and each entry has its own page. You can see the preview [here](/assets/journaling-ex1.pdf). The only thing its lacking is a table of contents.
+I can write my journal using this as is. It looks nice and each entry has its own page. You can see the [preview PDF here](/assets/journaling-ex1.pdf). The only thing its lacking is a table of contents.
 
 For the table of contents I wanted to be able to view it in a calendar-like grid. I can do that like this
 
@@ -87,7 +87,7 @@ For the table of contents I wanted to be able to view it in a calendar-like grid
 )
 ```
 
-[This](/assets/journaling-ex2.pdf) looks very pretty nice. The grid tiles the months left -> right, left -> right.
+[This first PDF](/assets/journaling-ex2.pdf) looks very pretty nice. The grid tiles the months left -> right, left -> right.
 
 And I can make the dates with entries links to the entries as well as making the links purple.
 
@@ -110,7 +110,7 @@ And the final product can be seen in the [final product PDF](/assets/journaling-
 
 One **major** issue with this strategy is that every entry must be in the same file. I really don't want to do that. Ideally I can sit down and just start typing without navigating to the end of the file and doing some formatting. Typst doesn't have support for reading directories quite yet, but there are a few workarounds to use. The one I will use is using a pythons script to create a `.typ` file and run the `typst compile content.typ` command. This isn't a beautiful approach but it let me automatically generate the calendar with links too[^1].
 
-*Note*: For brevity I won't include self-explanatory functions in this post. The full script can be found [here](/assets/journaling-example.zip).
+*Note*: For brevity I won't include self-explanatory functions in this post. Here is[the full script](/assets/journaling-example.zip).
 
 I can store templates for the main file itself and each entry in different `.typ` files, and replace placeholder variables with the required content.
 
@@ -274,6 +274,6 @@ The reason I do templating differently in the different parts of the script is b
 
 When put together the script generates a nice enough looking pdf that satisfies my prior requirements. It is easy to use; transferrable because entries are purely text in a git repo; and and it renders to a pdf.
 
-You can find an example zip [here](/assets/journaling-example.zip).
+You can find [the example zip](/assets/journaling-example.zip) here.
 
 [^1]: Typst does have a very powerful scripting language but without support for reading directories its not even worth trying in my opinion.
