@@ -16,7 +16,7 @@ export function ProjectCard({ project }: Props) {
         <div>
           <span>{project.date.modified ?? project.date.published}</span>
           <h2>
-            <Link href={`/projects/${project.slug}`} className="link">
+            <Link href={`/projects/${project.slug}`}>
               {project.title}
             </Link>
           </h2>

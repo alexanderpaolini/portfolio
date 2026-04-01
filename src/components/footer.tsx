@@ -92,7 +92,8 @@ function FooterItem({
             });
           }
         }}
-        className="link font-extrabold"
+        noUnderline
+        className="font-extrabold"
       >
         {link.icon && <>{link.icon} </>}
         {link.label}

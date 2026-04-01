@@ -12,20 +12,18 @@ export function PostCard({ post }: Props) {
     <div className="flex flex-col">
       <div className="shrink-0 block items-start gap-2 h-auto w-auto">
         <div>
-          <span>  
+          <span>
             {post.date.modified ?? post.date.published}
           </span>
           <h2>
-            <Link href={`/writing/${post.slug}`} className="link">
+            <Link href={`/writing/${post.slug}`} noUnderline>
               {post.title}
             </Link>
           </h2>
           <PostTags tags={post.tags} />
         </div>
       </div>
-      {post.description && (
-        <PostDescription description={post.description} />
-      )}
+      <PostDescription description={post.description} />
     </div>
   );
 }

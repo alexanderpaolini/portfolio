@@ -1,13 +1,11 @@
 import { FooterNav } from "@/components/footer";
-import Link from "@/components/link";
+import Link, { BackLink } from "@/components/link";
 
 export default function Page() {
   return (
     <>
       <main>
-        <Link href="/now/old" className="link">
-          <i className="nf nf-md-keyboard_backspace" /> Back
-        </Link>
+        <BackLink href="/now/old" />
         <h1 className="border-b-4">Now</h1>
         <span>Written: March 21, 2026</span>
         <div className="mt-8">

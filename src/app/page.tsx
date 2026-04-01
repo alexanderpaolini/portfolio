@@ -11,18 +11,18 @@ export default function Home() {
             <h1>Hi,</h1>
             <p>
               I&apos;m Alexander Paolini, a Computer Science student at the{" "}
-              <Link href="https://www.google.com/search?q=UCF" className="link">
+              <Link href="https://www.google.com/search?q=UCF">
                 University of Central Florida
               </Link>
               .
             </p>
             <p>
               Looking for my projects?{" "}
-              <Link href="/projects" className="link">
+              <Link href="/projects">
                 Right here!
               </Link>{" "}
               Or, check out what I&apos;m doing{" "}
-              <Link href="/now" className="link">
+              <Link href="/now">
                 at the moment
               </Link>
               .

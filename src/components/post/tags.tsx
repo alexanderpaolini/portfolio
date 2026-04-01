@@ -3,7 +3,8 @@ interface Props {
 }
 
 export function PostTags({ tags }: Props) {
-  return tags && (
+  if (!tags) return <></>
+  return (
     <span>{tags.join(', ')}</span>
   );
 }

@@ -1,15 +1,13 @@
 import { FooterNav, OldNowLink } from "@/components/footer";
 import Image from "next/image";
-import Link from "@/components/link";
+import Link, { BackLink } from "@/components/link";
 
 export default function Page() {
   return (
     <>
       <main>
         <div className="flex flex-col border-b-4 border-gray-300">
-          <Link href="/">
-            <i className="nf nf-md-keyboard_backspace" /> Back
-          </Link>
+          <BackLink href="/" />
           <h1>Now</h1>
           <span>Written: March 21, 2026</span>
         </div>

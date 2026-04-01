@@ -6,7 +6,8 @@ interface Props {
 }
 
 export function ProjectIcon({ icon, title }: Props) {
-  return icon && title && (
+  if (!icon || !title) return <></>
+  return (
     <div className="flex-shrink-0 flex items-center justify-center w-18 h-18 my-auto">
       <Image
         src={icon}

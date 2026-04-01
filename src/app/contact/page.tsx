@@ -1,15 +1,13 @@
 import { FooterNav } from "@/components/footer";
 import { Email, PhoneNumber, Socials } from "@/components/socials";
 import { EMAIL, PHONE } from "@/constants";
-import Link from "@/components/link";
+import { BackLink } from "@/components/link";
 
 export default async function Contact() {
   return (
     <>
       <main>
-        <Link href="/" className="link">
-          <i className="nf nf-md-keyboard_backspace" />{" "}Back
-        </Link>
+        <BackLink href="/" />
         <h1 className="border-b-4">Contact</h1>
         <section className="mt-8 flex flex-col gap-6">
           <p>Feel free to contact me by</p>

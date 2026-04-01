@@ -32,14 +32,16 @@ export function PhoneNumber({ phone }: PhoneProps) {
   };
 
   return (
-    <div
-      className="flex link whitespace-pre cursor-pointer"
-      onClick={handleClick}
-    >
-      {phone.map((char, idx) => (
-        <p key={idx}>{char}</p>
-      ))}
-    </div>
+    <Link href="">
+      <div
+        className="flex link whitespace-pre cursor-pointer"
+        onClick={handleClick}
+      >
+        {phone.map((char, idx) => (
+          <p key={idx}>{char}</p>
+        ))}
+      </div>
+    </Link>
   );
 }
 
@@ -57,14 +59,16 @@ export function Email({ email }: EmailPros) {
     document.body.removeChild(a);
   };
   return (
-    <div
-      className="flex link whitespace-pre cursor-pointer"
-      onClick={handleClick}
-    >
-      {email.map((char, idx) => (
-        <p key={idx}>{char}</p>
-      ))}
-    </div>
+    <Link href="">
+      <div
+        className="flex link whitespace-pre cursor-pointer"
+        onClick={handleClick}
+      >
+        {email.map((char, idx) => (
+          <p key={idx}>{char}</p>
+        ))}
+      </div>
+    </Link>
   );
 }
 

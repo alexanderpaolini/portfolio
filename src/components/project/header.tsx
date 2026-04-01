@@ -12,7 +12,7 @@ export function ProjectHeader({ icon, title, date }: Props) {
     <div className="flex flex-row border-b-4 border-gray-300">
       <ProjectIcon icon={icon} title={title} />
       <div className="items-center my-auto">
-        <Link href="/projects" className="link">
+        <Link href="/projects" noUnderline>
           <i className="nf nf-md-keyboard_backspace" />{" "}Back
         </Link>
         <h1>{title}</h1>

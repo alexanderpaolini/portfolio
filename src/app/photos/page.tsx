@@ -3,7 +3,7 @@
 import { FooterNav } from "@/components/footer";
 import { Photo, photos } from "@/constants/photos";
 import Image from "next/image";
-import Link from "@/components/link";
+import Link, { BackLink } from "@/components/link";
 import { useState } from "react";
 
 export default function Page() {
@@ -14,9 +14,7 @@ export default function Page() {
   return (
     <>
       <main>
-        <Link href="/" className="link">
-          <i className="nf nf-md-keyboard_backspace" />{" "}Back
-        </Link>
+        <BackLink href="/" />
         <h1 className="border-b-4 mb-6">Photos</h1>
         <p className="mb-8 max-w-2xl">
           Here are some of my favorite photos I&apos;ve taken. Click on them --

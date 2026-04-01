@@ -51,13 +51,3 @@ body {
     @apply text-xs;
   }
 }
-
-@layer components {
-  .link {
-    @apply text-purple-400 hover:text-purple-500 hover:underline underline-offset-4;
-  }
-
-  .dark .link {
-    @apply text-purple-300 hover:text-purple-400 hover:underline underline-offset-4;
-  }
-}

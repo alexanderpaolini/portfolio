@@ -6,7 +6,8 @@ interface Props {
 }
 
 export function ProjectCardIcon({ src, alt }: Props) {
-  return src && alt && (
+  if (!src || !alt) return <></>
+  return (
     <div className="flex items-center justify-center w-14 h-14 my-auto">
       <Image
         src={src}
