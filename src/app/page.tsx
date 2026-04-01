@@ -35,7 +35,7 @@ export default function Home() {
                 alt={`Picture of Alexander Paolini`}
                 width={300}
                 height={300}
-                className="rounded-[20px] hover:-scale-x-100"
+                className="rounded-3xl hover:-scale-x-100"
               />
             </div>
           </div>

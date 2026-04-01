@@ -41,13 +41,15 @@ export default async function WritingPage(props: Params) {
   if (!post) return notFound();
 
   return (
-    <main>
-      <PostHeader
-        title={post.title}
-        date={post.date.modified || post.date.published}
-      />
-      <PostBody content={post.content} />
+    <>
+      <main>
+        <PostHeader
+          title={post.title}
+          date={post.date.modified || post.date.published}
+        />
+        <PostBody content={post.content} />
+      </main>
       <FooterNav top={[TopLink]} />
-    </main>
+    </>
   );
 }

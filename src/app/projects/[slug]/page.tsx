@@ -43,14 +43,17 @@ export default async function ProjectPage(props: Params) {
   if (!project) return notFound();
 
   return (
-    <main>
-      <ProjectHeader
-        icon={project.icon}
-        title={project.title}
-        date={project.date.modified || project.date.published}
-      />
-      <ProjectBody content={project.content} />
+    <>
+      <main>
+        <ProjectHeader
+          icon={project.icon}
+          title={project.title}
+          date={project.date.modified || project.date.published}
+        />
+        <ProjectBody content={project.content} />
+      </main>
       <FooterNav top={[TopLink]} />
-    </main>
+    </>
   );
+
 }
