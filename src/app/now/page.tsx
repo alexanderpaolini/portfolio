@@ -18,7 +18,7 @@ export default function Page() {
         </span>
       </div>
       <div className="mt-8 flex flex-col gap-2">
-        <h3>School</h3>
+        <h2>School</h2>
         <p>
           I&apos;m still taking classes at{" "}
           <Link href="https://en.wikipedia.org/wiki/University_of_Central_Florida">
@@ -33,7 +33,7 @@ export default function Page() {
           I&apos;m approved to start taking graduate classes for the accelerated
           Masters&apos;, so I might get on that.
         </p>
-        <h3>Work</h3>
+        <h2>Work</h2>
         <p>
           I&apos;ve just started as a{" "}
           <Link href="https://techrangers.cdl.ucf.edu/">CDL Techranger</Link>.
@@ -42,10 +42,10 @@ export default function Page() {
         </p>
         <p>
           This summer I&apos;m going to Santa Clara, California, as an NVIDIA Ignite
-          Intern. I&apos;ll be working on the Tegra Systems Softare team. No I can&apos;t
+          Intern. I&apos;ll be working on the Tegra Systems Software team. No I can&apos;t
           get you a GPU -- I myself still use a 1050ti.
         </p>
-        <h3>Motorcycle</h3>
+        <h2>Motorcycle</h2>
         <div className="flex gap-2">
           <div className="flex flex-col gap-2">
             <p>
@@ -68,7 +68,7 @@ export default function Page() {
             style={{ height: "auto" }}
           />
         </div>
-        <h3>Olympic Weightlifting</h3>
+        <h2>Olympic Weightlifting</h2>
         <p>
           I&apos;ve mostly stopped Olympic Lifting for the time being. With classes
           and work and whatnot, cutting so much time out of my day for something
@@ -79,7 +79,7 @@ export default function Page() {
           I&apos;ll be back at some point. Not to win any medals, but to have some
           fun.
         </p>
-        <h3>Programming</h3>
+        <h2>Programming</h2>
         <p>
           I&apos;ve started the <Link href="https://cses.fi/problemset/">CSES</Link>{" "}
           grind once again. I&apos;m not very good, but there&apos;s only one way to get
