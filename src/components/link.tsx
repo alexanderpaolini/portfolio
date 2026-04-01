@@ -12,7 +12,7 @@ export default function Link({ className, children, href, noUnderline, ...props 
       {...props}
       target={ex ? "_blank" : undefined}
       rel={ex ? "noopener noreferrer" : undefined}
-      className={cn(`font-bold text-purple-400 hover:text-purple-500 ${!!noUnderline || "underline"} hover:underline underline-offset-4 dark:text-purple-300 dark:hover:text-purple-400`, className)}
+      className={cn(`font-bold text-purple-500 hover:text-purple-600 ${!!noUnderline || "underline"} hover:underline underline-offset-4 dark:text-purple-400 dark:hover:text-purple-500`, className)}
     >
       {children}
     </NextLink>
