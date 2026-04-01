@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-
 export interface Social {
-  image: ReactNode;
-  link: string;
+  href: string;
+  iconUrl: string;
+  alt: string;
+  padding?: string;
 }
 
 export interface Project {

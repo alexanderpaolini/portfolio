@@ -4,16 +4,15 @@ import Link from "@/components/link";
 import { Social as SocialType } from "../types";
 import { SOCIALS } from "@/constants";
 
-export function Social({ image, link }: SocialType) {
+export function Social({ href, iconUrl, alt, padding }: SocialType) {
   return (
-    <Link
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="h-[30px] w-[30px]"
-    >
-      {image}
-    </Link>
+    <a href={href} style={{ display: "inline-block", width: "45px", padding }}>
+      <img
+        src={iconUrl}
+        alt={alt}
+        style={{ width: "100%", height: "auto", display: "block" }}
+      />
+    </a>
   );
 }
 
@@ -74,10 +73,10 @@ export function Email({ email }: EmailPros) {
 
 export function Socials() {
   return (
-    <div className="flex flex-row gap-4 items-center flex-wrap">
+    <div className="flex flex-row gap-2 items-center flex-wrap">
       {SOCIALS.map((social, idx) => (
-        <Social key={idx} image={social.image} link={social.link} />
+        <Social key={idx} {...social} />
       ))}
-    </div>
+    </div >
   );
 }

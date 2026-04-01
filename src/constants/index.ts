@@ -1,7 +1,5 @@
 import { Social } from "@/types";
 import { Metadata } from "next";
-import { SiDiscord, SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
-import { BeatLeaderIcon } from "./beatleader-icon";
 
 export const SOCIAL_SIZE = 30;
 
@@ -14,24 +12,30 @@ export const DESCRIPTION =
 
 export const SOCIALS: Social[] = [
   {
-    image: BeatLeaderIcon(),
-    link: "https://beatleader.com/u/million",
+    alt: "GitHub",
+    href: "https://github.com/alexanderpaolini",
+    iconUrl: "/assets/icons/github.png"
   },
   {
-    image: SiDiscord({ size: SOCIAL_SIZE, color: "#5865F2" }),
-    link: "https://discord.com/users/277183033344524288",
+    alt: "LinkedIn",
+    href: "https://linkedin.com/in/alexanderpaolini",
+    iconUrl: "/assets/icons/linkedin.png",
   },
   {
-    image: SiInstagram({ size: SOCIAL_SIZE, color: "#E1306C" }),
-    link: "https://instagram.com/alexander.paolini",
+    alt: "Instagram",
+    href: "https://github.com/alexanderpaolini",
+    iconUrl: "/assets/icons/instagram.png",
+    padding: "3px",
   },
   {
-    image: SiGithub({ size: SOCIAL_SIZE, className: "light:text-[#181717]" }),
-    link: "https://github.com/alexanderpaolini",
+    alt: "Discord",
+    href: "https://discord.com/users/277183033344524288",
+    iconUrl: "/assets/icons/discord.png",
   },
   {
-    image: SiLinkedin({ size: SOCIAL_SIZE, color: "#0A66C2" }),
-    link: "https://linkedin.com/in/alexanderpaolini",
+    alt: "BeatLeader",
+    href: "https://beatleader.com/u/million",
+    iconUrl: "/assets/icons/beatleader.png"
   }
 ];
 
