@@ -58,7 +58,7 @@ export default function Page() {
               </p>
             </div>
             <Image
-              alt="VTEC just kicked in, yo."
+              alt="Me on a 2014 VFR800 at the JenningsGP motorcycle track."
               src="/assets/now/03-21-26/std_td.jpeg"
               width={0}
               height={0}
